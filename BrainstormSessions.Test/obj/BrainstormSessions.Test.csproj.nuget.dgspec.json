@@ -1,0 +1,156 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/lavetos/Projects/NETMentoring/Logging/BrainstormSessions.Test/BrainstormSessions.Test.csproj": {}
+  },
+  "projects": {
+    "/Users/lavetos/Projects/NETMentoring/Logging/BrainstormSessions.Test/BrainstormSessions.Test.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/lavetos/Projects/NETMentoring/Logging/BrainstormSessions.Test/BrainstormSessions.Test.csproj",
+        "projectName": "BrainstormSessions.Test",
+        "projectPath": "/Users/lavetos/Projects/NETMentoring/Logging/BrainstormSessions.Test/BrainstormSessions.Test.csproj",
+        "packagesPath": "/Users/lavetos/.nuget/packages/",
+        "outputPath": "/Users/lavetos/Projects/NETMentoring/Logging/BrainstormSessions.Test/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/lavetos/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/lavetos/Projects/NETMentoring/Logging/BrainstormSessions/BrainstormSessions.csproj": {
+                "projectPath": "/Users/lavetos/Projects/NETMentoring/Logging/BrainstormSessions/BrainstormSessions.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.2.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.14.6, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            },
+            "log4net": {
+              "target": "Package",
+              "version": "[2.0.11, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            },
+            "xunit.runner.visualstudio": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.310/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/lavetos/Projects/NETMentoring/Logging/BrainstormSessions/BrainstormSessions.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/lavetos/Projects/NETMentoring/Logging/BrainstormSessions/BrainstormSessions.csproj",
+        "projectName": "BrainstormSessions",
+        "projectPath": "/Users/lavetos/Projects/NETMentoring/Logging/BrainstormSessions/BrainstormSessions.csproj",
+        "packagesPath": "/Users/lavetos/.nuget/packages/",
+        "outputPath": "/Users/lavetos/Projects/NETMentoring/Logging/BrainstormSessions/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/lavetos/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "/usr/local/share/dotnet/sdk/7.0.310/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[3.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.310/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

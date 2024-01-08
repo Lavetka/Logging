@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/lavetos/Projects/NETMentoring/Logging/BrainstormSessions/wwwroot/css/bootstrap.css",
+      "PackagePath": "staticwebassets/css/bootstrap.css"
+    },
+    {
+      "Id": "/Users/lavetos/Projects/NETMentoring/Logging/BrainstormSessions/wwwroot/js/bootstrap.js",
+      "PackagePath": "staticwebassets/js/bootstrap.js"
+    },
+    {
+      "Id": "/Users/lavetos/Projects/NETMentoring/Logging/BrainstormSessions/wwwroot/js/jquery-2.2.0.js",
+      "PackagePath": "staticwebassets/js/jquery-2.2.0.js"
+    },
+    {
+      "Id": "/Users/lavetos/Projects/NETMentoring/Logging/BrainstormSessions/wwwroot/js/knockout-3.4.2.js",
+      "PackagePath": "staticwebassets/js/knockout-3.4.2.js"
+    },
+    {
+      "Id": "/Users/lavetos/Projects/NETMentoring/Logging/BrainstormSessions/wwwroot/js/knockout.mapping.js",
+      "PackagePath": "staticwebassets/js/knockout.mapping.js"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.BrainstormSessions.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.build.BrainstormSessions.props",
+      "PackagePath": "build\\BrainstormSessions.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.buildMultiTargeting.BrainstormSessions.props",
+      "PackagePath": "buildMultiTargeting\\BrainstormSessions.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.buildTransitive.BrainstormSessions.props",
+      "PackagePath": "buildTransitive\\BrainstormSessions.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
