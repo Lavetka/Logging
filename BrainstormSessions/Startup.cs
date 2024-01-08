@@ -9,6 +9,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Serilog;
+using Serilog.Events;
 
 namespace BrainstormSessions
 {
@@ -23,6 +25,16 @@ namespace BrainstormSessions
 
             services.AddScoped<IBrainstormSessionRepository,
                 EFStormSessionRepository>();
+
+            Log.Logger = new LoggerConfiguration()
+            .WriteTo.Console()
+            .WriteTo.File("Logs/log.txt", rollingInterval: RollingInterval.Day)
+            .CreateLogger();
+
+            services.AddLogging(loggingBuilder =>
+            {
+                loggingBuilder.AddSerilog();
+            });
         }
 
         public void Configure(IApplicationBuilder app,
@@ -46,6 +58,8 @@ namespace BrainstormSessions
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            app.UseSerilogRequestLogging();
         }
 
         public async Task InitializeDatabaseAsync(IBrainstormSessionRepository repo)
