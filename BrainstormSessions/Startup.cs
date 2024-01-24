@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using System.Threading.Tasks;
+using BrainstormSessions.Controllers;
 using BrainstormSessions.Core.Interfaces;
 using BrainstormSessions.Core.Model;
 using BrainstormSessions.Infrastructure;
@@ -9,6 +10,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
+using Serilog;
+using Serilog.Events;
 
 namespace BrainstormSessions
 {
@@ -23,6 +27,23 @@ namespace BrainstormSessions
 
             services.AddScoped<IBrainstormSessionRepository,
                 EFStormSessionRepository>();
+
+            Log.Logger = new LoggerConfiguration()
+                .WriteTo.Console()
+                .WriteTo.File("logs/log.txt", rollingInterval: RollingInterval.Day)
+                .WriteTo.Debug()
+                .WriteTo.Email(
+                fromEmail: "Hleb_lavetka@epam.com",
+                toEmail: "Hleb_lavetka@epam.com",
+                mailServer: "smtp.office365.com",
+                restrictedToMinimumLevel: LogEventLevel.Error, 
+                outputTemplate: "[{Timestamp:HH:mm:ss} {Level:u3}] {Message:lj}{NewLine}{Exception}")
+                .CreateLogger();
+
+            services.AddLogging(loggingBuilder =>
+            {
+                loggingBuilder.AddSerilog();
+            });
         }
 
         public void Configure(IApplicationBuilder app,
@@ -46,6 +67,10 @@ namespace BrainstormSessions
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            app.UseSerilogRequestLogging();
+
+            app.UseExceptionHandler("/Home/Error");
         }
 
         public async Task InitializeDatabaseAsync(IBrainstormSessionRepository repo)
