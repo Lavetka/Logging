@@ -19,11 +19,6 @@ namespace BrainstormSessions.Controllers
             _logger = logger;
         }
 
-        /* private ILogger<SessionController> Logger
-         {
-             get => _logger ??= HttpContext?.RequestServices.GetService<ILogger<SessionController>>();
-         }*/
-
         public async Task<IActionResult> Index(int? id)
         {
             try {
@@ -46,12 +41,12 @@ namespace BrainstormSessions.Controllers
                     Name = session.Name,
                     Id = session.Id
                 };
-                Logger.LogInformation("All good");
+                _logger.LogInformation("All good");
                 return View(viewModel);
             }
             catch(Exception e)
             {
-                Logger.LogCritical("Error");
+                _logger.LogCritical("Error");
                 throw;
             }
         }
