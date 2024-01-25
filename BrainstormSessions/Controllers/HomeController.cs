@@ -6,12 +6,7 @@ using BrainstormSessions.Core.Interfaces;
 using BrainstormSessions.Core.Model;
 using BrainstormSessions.ViewModels;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Logging.Abstractions;
-using Serilog;
-using Serilog.Core;
-using Serilog.Events;
 
 namespace BrainstormSessions.Controllers
 {

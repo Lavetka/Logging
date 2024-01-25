@@ -1,0 +1,2 @@
+2024-01-19 18:17:08.980 +03:00 [INF] User profile is available. Using '/Users/lavetos/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2024-01-19 18:17:09.162 +03:00 [INF] Entity Framework Core 3.0.1 initialized 'AppDbContext' using provider 'Microsoft.EntityFrameworkCore.InMemory' with options: StoreName=InMemoryDb 
