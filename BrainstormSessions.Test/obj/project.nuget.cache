@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "WOL8bAZfsKXB73f24VCihBQfKFgD7yK9aD9FDfboDc4kiZBsSNB/7YPNZ7Mz2PQS/zLxJvYr+eKxDWQjbaB3Ww==",
+  "dgSpecHash": "+MGzZRa88t7YW7Gil7Zy7ixswqe2xD+QzGQqOtNgm6B16hhCA9rS6tS7gABuyqy4aq25s+svwaVeYjs85NabVA==",
   "success": true,
   "projectFilePath": "/Users/lavetos/Projects/NETMentoring/Logging/BrainstormSessions.Test/BrainstormSessions.Test.csproj",
   "expectedPackageFiles": [
@@ -10,12 +10,12 @@
     "/Users/lavetos/.nuget/packages/mailkit/2.6.0/mailkit.2.6.0.nupkg.sha512",
     "/Users/lavetos/.nuget/packages/microsoft.codecoverage/16.2.0/microsoft.codecoverage.16.2.0.nupkg.sha512",
     "/Users/lavetos/.nuget/packages/microsoft.csharp/4.0.1/microsoft.csharp.4.0.1.nupkg.sha512",
-    "/Users/lavetos/.nuget/packages/microsoft.entityframeworkcore/3.0.1/microsoft.entityframeworkcore.3.0.1.nupkg.sha512",
-    "/Users/lavetos/.nuget/packages/microsoft.entityframeworkcore.abstractions/3.0.1/microsoft.entityframeworkcore.abstractions.3.0.1.nupkg.sha512",
-    "/Users/lavetos/.nuget/packages/microsoft.entityframeworkcore.analyzers/3.0.1/microsoft.entityframeworkcore.analyzers.3.0.1.nupkg.sha512",
-    "/Users/lavetos/.nuget/packages/microsoft.entityframeworkcore.inmemory/3.0.1/microsoft.entityframeworkcore.inmemory.3.0.1.nupkg.sha512",
-    "/Users/lavetos/.nuget/packages/microsoft.extensions.caching.abstractions/3.0.1/microsoft.extensions.caching.abstractions.3.0.1.nupkg.sha512",
-    "/Users/lavetos/.nuget/packages/microsoft.extensions.caching.memory/3.0.1/microsoft.extensions.caching.memory.3.0.1.nupkg.sha512",
+    "/Users/lavetos/.nuget/packages/microsoft.entityframeworkcore/7.0.0/microsoft.entityframeworkcore.7.0.0.nupkg.sha512",
+    "/Users/lavetos/.nuget/packages/microsoft.entityframeworkcore.abstractions/7.0.0/microsoft.entityframeworkcore.abstractions.7.0.0.nupkg.sha512",
+    "/Users/lavetos/.nuget/packages/microsoft.entityframeworkcore.analyzers/7.0.0/microsoft.entityframeworkcore.analyzers.7.0.0.nupkg.sha512",
+    "/Users/lavetos/.nuget/packages/microsoft.entityframeworkcore.inmemory/7.0.0/microsoft.entityframeworkcore.inmemory.7.0.0.nupkg.sha512",
+    "/Users/lavetos/.nuget/packages/microsoft.extensions.caching.abstractions/7.0.0/microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
+    "/Users/lavetos/.nuget/packages/microsoft.extensions.caching.memory/7.0.0/microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
     "/Users/lavetos/.nuget/packages/microsoft.extensions.configuration.abstractions/8.0.0/microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
     "/Users/lavetos/.nuget/packages/microsoft.extensions.configuration.binder/8.0.0/microsoft.extensions.configuration.binder.8.0.0.nupkg.sha512",
     "/Users/lavetos/.nuget/packages/microsoft.extensions.dependencyinjection/8.0.0/microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512",
@@ -66,14 +66,14 @@
     "/Users/lavetos/.nuget/packages/serilog.sinks.debug/2.0.0/serilog.sinks.debug.2.0.0.nupkg.sha512",
     "/Users/lavetos/.nuget/packages/serilog.sinks.email/2.4.0/serilog.sinks.email.2.4.0.nupkg.sha512",
     "/Users/lavetos/.nuget/packages/serilog.sinks.file/5.0.0/serilog.sinks.file.5.0.0.nupkg.sha512",
+    "/Users/lavetos/.nuget/packages/serilog.sinks.log4net/1.5.16/serilog.sinks.log4net.1.5.16.nupkg.sha512",
     "/Users/lavetos/.nuget/packages/serilog.sinks.periodicbatching/2.3.0/serilog.sinks.periodicbatching.2.3.0.nupkg.sha512",
     "/Users/lavetos/.nuget/packages/system.collections/4.3.0/system.collections.4.3.0.nupkg.sha512",
     "/Users/lavetos/.nuget/packages/system.collections.concurrent/4.3.0/system.collections.concurrent.4.3.0.nupkg.sha512",
-    "/Users/lavetos/.nuget/packages/system.collections.immutable/1.6.0/system.collections.immutable.1.6.0.nupkg.sha512",
+    "/Users/lavetos/.nuget/packages/system.collections.immutable/1.2.0/system.collections.immutable.1.2.0.nupkg.sha512",
     "/Users/lavetos/.nuget/packages/system.collections.nongeneric/4.3.0/system.collections.nongeneric.4.3.0.nupkg.sha512",
     "/Users/lavetos/.nuget/packages/system.collections.specialized/4.3.0/system.collections.specialized.4.3.0.nupkg.sha512",
     "/Users/lavetos/.nuget/packages/system.componentmodel/4.3.0/system.componentmodel.4.3.0.nupkg.sha512",
-    "/Users/lavetos/.nuget/packages/system.componentmodel.annotations/4.6.0/system.componentmodel.annotations.4.6.0.nupkg.sha512",
     "/Users/lavetos/.nuget/packages/system.componentmodel.eventbasedasync/4.0.11/system.componentmodel.eventbasedasync.4.0.11.nupkg.sha512",
     "/Users/lavetos/.nuget/packages/system.componentmodel.primitives/4.3.0/system.componentmodel.primitives.4.3.0.nupkg.sha512",
     "/Users/lavetos/.nuget/packages/system.componentmodel.typeconverter/4.3.0/system.componentmodel.typeconverter.4.3.0.nupkg.sha512",
@@ -139,7 +139,7 @@
     "/Users/lavetos/.nuget/packages/system.text.regularexpressions/4.3.0/system.text.regularexpressions.4.3.0.nupkg.sha512",
     "/Users/lavetos/.nuget/packages/system.threading/4.3.0/system.threading.4.3.0.nupkg.sha512",
     "/Users/lavetos/.nuget/packages/system.threading.tasks/4.3.0/system.threading.tasks.4.3.0.nupkg.sha512",
-    "/Users/lavetos/.nuget/packages/system.threading.tasks.extensions/4.5.2/system.threading.tasks.extensions.4.5.2.nupkg.sha512",
+    "/Users/lavetos/.nuget/packages/system.threading.tasks.extensions/4.5.1/system.threading.tasks.extensions.4.5.1.nupkg.sha512",
     "/Users/lavetos/.nuget/packages/system.threading.thread/4.0.0/system.threading.thread.4.0.0.nupkg.sha512",
     "/Users/lavetos/.nuget/packages/system.threading.threadpool/4.3.0/system.threading.threadpool.4.3.0.nupkg.sha512",
     "/Users/lavetos/.nuget/packages/system.threading.timer/4.0.1/system.threading.timer.4.0.1.nupkg.sha512",
@@ -158,5 +158,16 @@
     "/Users/lavetos/.nuget/packages/xunit.extensibility.execution/2.4.0/xunit.extensibility.execution.2.4.0.nupkg.sha512",
     "/Users/lavetos/.nuget/packages/xunit.runner.visualstudio/2.4.0/xunit.runner.visualstudio.2.4.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Serilog.Sinks.Log4Net 1.5.16' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Serilog.Sinks.Log4Net",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    }
+  ]
 }

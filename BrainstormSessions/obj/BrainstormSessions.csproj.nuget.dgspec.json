@@ -42,7 +42,7 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore.InMemory": {
               "target": "Package",
-              "version": "[3.0.1, )"
+              "version": "[7.0.0, )"
             },
             "Serilog": {
               "target": "Package",

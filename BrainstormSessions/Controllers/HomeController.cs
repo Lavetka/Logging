@@ -6,15 +6,15 @@ using BrainstormSessions.Core.Interfaces;
 using BrainstormSessions.Core.Model;
 using BrainstormSessions.ViewModels;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
+using Serilog;
 
 namespace BrainstormSessions.Controllers
 {
     public class HomeController : Controller
     {
         private readonly IBrainstormSessionRepository _sessionRepository;
-        private ILogger<HomeController> _logger;
-        public HomeController(IBrainstormSessionRepository sessionRepository, ILogger<HomeController> logger)
+        private ILogger _logger;
+        public HomeController(IBrainstormSessionRepository sessionRepository, ILogger logger)
         {
             _sessionRepository = sessionRepository;
             _logger = logger;
@@ -33,12 +33,12 @@ namespace BrainstormSessions.Controllers
                     Name = session.Name,
                     IdeaCount = session.Ideas.Count
                 });
-                _logger.LogInformation("All good");
+                _logger.Information("All good");
                 return View(model);
             }
             catch (Exception ex)
             {
-                _logger.LogCritical(ex, "An error: ", ex);
+                _logger.Fatal(ex, "An error: ", ex);
                 throw;
             }
         }
@@ -56,7 +56,7 @@ namespace BrainstormSessions.Controllers
             {
                 if (!ModelState.IsValid)
                 {
-                    _logger.LogError("Error appears");
+                    _logger.Error("Error appears");
                     Console.WriteLine("asdasdasdasdasdasdasdasdas");
                     return BadRequest(ModelState);
                 }
@@ -68,12 +68,12 @@ namespace BrainstormSessions.Controllers
                         Name = model.SessionName
                     });
                 }
-                _logger.LogInformation("All good");
+                _logger.Information("All good");
                 return RedirectToAction(actionName: nameof(Index));
             }
             catch (Exception ex)
             {
-                _logger.LogCritical("Issues appears", ex);
+                _logger.Fatal("Issues appears", ex);
                 throw;
             }
         }

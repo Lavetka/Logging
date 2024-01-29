@@ -91,6 +91,10 @@
               "target": "Package",
               "version": "[5.0.0, )"
             },
+            "Serilog.Sinks.Log4Net": {
+              "target": "Package",
+              "version": "[1.5.16, )"
+            },
             "coverlet.collector": {
               "target": "Package",
               "version": "[1.0.1, )"
@@ -166,7 +170,7 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore.InMemory": {
               "target": "Package",
-              "version": "[3.0.1, )"
+              "version": "[7.0.0, )"
             },
             "Serilog": {
               "target": "Package",

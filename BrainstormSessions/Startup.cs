@@ -10,7 +10,6 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Serilog;
 using Serilog.Events;
 
@@ -28,7 +27,7 @@ namespace BrainstormSessions
             services.AddScoped<IBrainstormSessionRepository,
                 EFStormSessionRepository>();
 
-            Log.Logger = new LoggerConfiguration()
+            var logger = new LoggerConfiguration()
                 .WriteTo.Console()
                 .WriteTo.File("logs/log.txt", rollingInterval: RollingInterval.Day)
                 .WriteTo.Debug()
@@ -40,10 +39,7 @@ namespace BrainstormSessions
                 outputTemplate: "[{Timestamp:HH:mm:ss} {Level:u3}] {Message:lj}{NewLine}{Exception}")
                 .CreateLogger();
 
-            services.AddLogging(loggingBuilder =>
-            {
-                loggingBuilder.AddSerilog();
-            });
+            services.AddSerilog(logger);
         }
 
         public void Configure(IApplicationBuilder app,

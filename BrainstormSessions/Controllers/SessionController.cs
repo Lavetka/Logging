@@ -3,17 +3,16 @@ using System.Threading.Tasks;
 using BrainstormSessions.Core.Interfaces;
 using BrainstormSessions.ViewModels;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
+using Serilog;
 
 namespace BrainstormSessions.Controllers
 {
     public class SessionController : Controller
     {
         private readonly IBrainstormSessionRepository _sessionRepository;
-        private ILogger<SessionController> _logger;
+        private ILogger _logger;
 
-        public SessionController(IBrainstormSessionRepository sessionRepository, ILogger<SessionController> logger)
+        public SessionController(IBrainstormSessionRepository sessionRepository, ILogger logger)
         {
             _sessionRepository = sessionRepository;
             _logger = logger;
@@ -24,7 +23,7 @@ namespace BrainstormSessions.Controllers
             try {
                 if (!id.HasValue)
                 {
-                    _logger.LogError("All Bad");
+                    _logger.Error("All Bad");
                     return RedirectToAction(actionName: nameof(Index),
                     controllerName: "Home");
                 }
@@ -41,12 +40,12 @@ namespace BrainstormSessions.Controllers
                     Name = session.Name,
                     Id = session.Id
                 };
-                _logger.LogInformation("All good");
+                _logger.Information("All good");
                 return View(viewModel);
             }
             catch(Exception e)
             {
-                _logger.LogCritical("Error");
+                _logger.Fatal("Error");
                 throw;
             }
         }

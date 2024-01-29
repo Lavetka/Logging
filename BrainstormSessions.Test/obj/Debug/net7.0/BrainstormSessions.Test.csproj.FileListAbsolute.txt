@@ -257,3 +257,4 @@
 /Users/lavetos/Projects/NETMentoring/Logging/BrainstormSessions.Test/obj/Debug/net7.0/BrainstormSessions.Test.pdb
 /Users/lavetos/Projects/NETMentoring/Logging/BrainstormSessions.Test/obj/Debug/net7.0/BrainstormSessions.Test.genruntimeconfig.cache
 /Users/lavetos/Projects/NETMentoring/Logging/BrainstormSessions.Test/obj/Debug/net7.0/ref/BrainstormSessions.Test.dll
+/Users/lavetos/Projects/NETMentoring/Logging/BrainstormSessions.Test/bin/Debug/net7.0/Serilog.Sinks.Log4Net.dll
