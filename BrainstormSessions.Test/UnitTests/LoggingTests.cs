@@ -17,7 +17,7 @@ namespace BrainstormSessions.Test.UnitTests
     public class LoggingTests : IDisposable
     {
         private readonly MemoryAppender _appender;
-        private readonly ILogger loggerInst;
+        private readonly Serilog.ILogger logger;
 
 
         public LoggingTests()
@@ -25,13 +25,10 @@ namespace BrainstormSessions.Test.UnitTests
             _appender = new MemoryAppender();
             BasicConfigurator.Configure(_appender);
 
-            var loggerConfiguration = new LoggerConfiguration()
-                 .MinimumLevel.Debug()
-                 .WriteTo.Log4Net()
-                 .WriteTo.Debug()
-                 .CreateLogger();
-
-            loggerInst = loggerConfiguration;
+            logger = new LoggerConfiguration()
+           .WriteTo.Log4Net()
+           .MinimumLevel.Debug()
+           .CreateLogger();
         }
 
         public void Dispose()
@@ -46,7 +43,7 @@ namespace BrainstormSessions.Test.UnitTests
             var mockRepo = new Mock<IBrainstormSessionRepository>();
             mockRepo.Setup(repo => repo.ListAsync())
                 .ReturnsAsync(GetTestSessions());
-            var controller = new HomeController(mockRepo.Object, loggerInst);
+            var controller = new HomeController(mockRepo.Object, logger);
 
             // Act
             var result = await controller.Index();
@@ -63,7 +60,7 @@ namespace BrainstormSessions.Test.UnitTests
             var mockRepo = new Mock<IBrainstormSessionRepository>();
             mockRepo.Setup(repo => repo.ListAsync())
                 .ReturnsAsync(GetTestSessions());
-            var controller = new HomeController(mockRepo.Object, loggerInst);
+            var controller = new HomeController(mockRepo.Object, logger);
             controller.ModelState.AddModelError("SessionName", "Required");
             var newSession = new HomeController.NewSessionModel();
 
@@ -100,7 +97,7 @@ namespace BrainstormSessions.Test.UnitTests
             mockRepo.Setup(repo => repo.GetByIdAsync(testSessionId))
                 .ReturnsAsync(GetTestSessions().FirstOrDefault(
                     s => s.Id == testSessionId));
-            var controller = new SessionController(mockRepo.Object, loggerInst);
+            var controller = new SessionController(mockRepo.Object, logger);
 
             // Act
             var result = await controller.Index(testSessionId);
