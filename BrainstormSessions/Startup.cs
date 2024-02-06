@@ -12,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Serilog;
 using Serilog.Events;
+using Serilog.Sinks.EmailPickup;
 
 namespace BrainstormSessions
 {
@@ -28,16 +29,16 @@ namespace BrainstormSessions
                 EFStormSessionRepository>();
 
             var logger = new LoggerConfiguration()
-                .WriteTo.Console()
-                .WriteTo.File("logs/log.txt", rollingInterval: RollingInterval.Day)
-                .WriteTo.Debug()
-                .WriteTo.Email(
-                fromEmail: "Hleb_lavetka@epam.com",
-                toEmail: "Hleb_lavetka@epam.com",
-                mailServer: "smtp.office365.com",
-                restrictedToMinimumLevel: LogEventLevel.Error, 
-                outputTemplate: "[{Timestamp:HH:mm:ss} {Level:u3}] {Message:lj}{NewLine}{Exception}")
-                .CreateLogger();
+           .WriteTo.Console()
+           .WriteTo.File("logs/log.txt", rollingInterval: RollingInterval.Day)
+           .WriteTo.EmailPickup(
+             fromEmail: "app@example.com",
+             toEmail: "support@example.com",
+             pickupDirectory: "/Users/lavetos/Documents",
+             subject: "UH OH",
+             fileExtension: ".email",
+             restrictedToMinimumLevel: LogEventLevel.Information)
+           .CreateLogger();
 
             services.AddSerilog(logger);
         }
